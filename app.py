@@ -132,6 +132,22 @@ def users_docs() -> str:
     """Route to render the users documentation page."""
     return render_template('users_docs.html')
 
+# Topbar menu routes
+@app.route('/team')
+def team():
+    flash('This route is not yet completely built.')
+    return redirect(url_for('hello'))
+
+@app.route('/testimonials')
+def testimonials():
+    flash('This route is not yet completely built.')
+    return redirect(url_for('hello'))
+
+@app.route('/contact')
+def contact():
+    flash('This route is not yet completely built.')
+    return redirect(url_for('hello'))
+
 
 # ------- CRUD operations for User -----------
 
