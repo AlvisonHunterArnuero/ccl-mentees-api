@@ -1,0 +1,125 @@
+{% extends 'base.html' %}
+
+{% block title %}Mentees Docs - Mentees API Documentation{% endblock %}
+{% block content %}
+<div class="container my-5 pt-4">
+<div class="row d-flex justify-content-center align-items-center">
+<div class="col-12 my-5">
+        <h1>Mentees API Documentation</h1>
+        <p class="lead">This guide covers the endpoints for managing mentees in the CCL Mentoring Program API.</p>
+
+        <hr>
+
+        <h2>Create Mentee</h2>
+        <p>Use this endpoint to create a new mentee.</p>
+        <h4>URL</h4>
+        <p><code>POST /mentees</code></p>
+        <h4>Request Body</h4>
+        <pre><code>{
+    "name": "string",
+    "last_name": "string",
+    "email": "string",
+    "phone": "string",
+    "english_level": "string",
+    "python_level": "string",
+    "javascript_level": "string",
+    "seniority": "string",
+    "linkedin_profile": "string",
+    "github_profile": "string",
+    "website": "string",
+    "final_grade": 0.0
+}</code></pre>
+        <h4>Response</h4>
+        <pre><code>{
+    "message": "Mentee created successfully"
+}</code></pre>
+
+        <hr>
+
+        <h2>Get All Mentees</h2>
+        <p>Use this endpoint to retrieve all mentees.</p>
+        <h4>URL</h4>
+        <p><code>GET /mentees</code></p>
+        <h4>Response</h4>
+        <pre><code>[
+    {
+        "id": 1,
+        "name": "string",
+        "last_name": "string",
+        "email": "string",
+        "phone": "string",
+        "english_level": "string",
+        "python_level": "string",
+        "javascript_level": "string",
+        "seniority": "string",
+        "linkedin_profile": "string",
+        "github_profile": "string",
+        "website": "string",
+        "final_grade": 0.0
+    },
+    ...
+]</code></pre>
+
+        <hr>
+
+        <h2>Get Mentee by ID</h2>
+        <p>Use this endpoint to retrieve a mentee by their ID.</p>
+        <h4>URL</h4>
+        <p><code>GET /mentees/&lt;id&gt;</code></p>
+        <h4>Response</h4>
+        <pre><code>{
+    "id": 1,
+    "name": "string",
+    "last_name": "string",
+    "email": "string",
+    "phone": "string",
+    "english_level": "string",
+    "python_level": "string",
+    "javascript_level": "string",
+    "seniority": "string",
+    "linkedin_profile": "string",
+    "github_profile": "string",
+    "website": "string",
+    "final_grade": 0.0
+}</code></pre>
+
+        <hr>
+
+        <h2>Update Mentee</h2>
+        <p>Use this endpoint to update an existing mentee's information.</p>
+        <h4>URL</h4>
+        <p><code>PUT /mentees/&lt;id&gt;</code></p>
+        <h4>Request Body</h4>
+        <pre><code>{
+    "name": "string",
+    "last_name": "string",
+    "email": "string",
+    "phone": "string",
+    "english_level": "string",
+    "python_level": "string",
+    "javascript_level": "string",
+    "seniority": "string",
+    "linkedin_profile": "string",
+    "github_profile": "string",
+    "website": "string",
+    "final_grade": 0.0
+}</code></pre>
+        <h4>Response</h4>
+        <pre><code>{
+    "message": "Mentee updated successfully"
+}</code></pre>
+
+        <hr>
+
+        <h2>Delete Mentee</h2>
+        <p>Use this endpoint to delete a mentee.</p>
+        <h4>URL</h4>
+        <p><code>DELETE /mentees/&lt;id&gt;</code></p>
+        <h4>Response</h4>
+        <pre><code>{
+    "message": "Mentee deleted successfully"
+}</code></pre>
+</div>
+</div>
+</div>
+{% endblock %}

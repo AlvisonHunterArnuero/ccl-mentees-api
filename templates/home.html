@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block title %}Home - CCL Mentoring Program API{% endblock %}
+{% block content %}
+<div class="container my-5 pt-4">
+   <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12 my-5">
+         <h1 class="text-center display-4 my-5">Welcome to the CCL Mentoring Program API</h1>
+         </h1>
+         <p class="text-center">You must login to this API in order to modify the data. Contact the API admin for details on this matter</p>
+      </div>
+   </div>
+   <div class="row d-flex justify-content-center align-items-center mx-4">
+      <div class="col-12 col-md-6 col-lg-4">
+         <div class="card mb-3 mb-md-0">
+            <img src="https://res.cloudinary.com/alvison-hunter/image/upload/v1721507193/ccl-api/login_jacwur.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h5 class="card-title">Login Guide</h5>
+               <h6 class="card-subtitle mb-2 text-muted">All Login Related Topics</h6>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a href="/login_docs" class="btn btn-primary">Go To Login Guide</a>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+         <div class="card mb-3 mb-md-0">
+            <img src="https://res.cloudinary.com/alvison-hunter/image/upload/v1721507193/ccl-api/mentee_trtu7d.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h5 class="card-title">Mentees Docs</h5>
+               <h6 class="card-subtitle mb-2 text-muted">All Mentees Related Topics</h6>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a href="/mentees_docs" class="btn btn-primary">Go to Mentees Docs</a>
+            </div>
+         </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+         <div class="card">
+            <img src="https://res.cloudinary.com/alvison-hunter/image/upload/c_crop,w_612,h_359/v1721507193/ccl-api/users_hhlgsx.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+               <h5 class="card-title">User Docs</h5>
+               <h6 class="card-subtitle mb-2 text-muted">All Users Related Topics</h6>
+               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+               <a href="/users_docs" class="btn btn-primary">Get Users Docs</a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+{% endblock %}

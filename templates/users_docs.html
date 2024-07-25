@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+{% block title %}Users Docs - Users API Documentation{% endblock %}
+{% block content %}
+<div class="container my-5 pt-4">
+   <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-12 my-5">
+         <h1>Users API Documentation</h1>
+         <p class="lead">This guide covers the endpoints for managing users in the CCL Mentoring Program API.</p>
+         <hr>
+         <h2>Create User</h2>
+         <p>Use this endpoint to create a new user.</p>
+         <h4>URL</h4>
+         <p><code>POST /users</code></p>
+         <h4>Request Body</h4>
+         <pre><code>{
+    "name": "string",
+    "password": "string",
+    "role": "admin" | "guest"
+}</code></pre>
+         <h4>Response</h4>
+         <pre><code>{
+    "message": "User created successfully"
+}</code></pre>
+         <hr>
+         <h2>Get All Users</h2>
+         <p>Use this endpoint to retrieve all users.</p>
+         <h4>URL</h4>
+         <p><code>GET /users</code></p>
+         <h4>Response</h4>
+         <pre><code>[
+    {
+        "id": 1,
+        "name": "string",
+        "password": "string",
+        "role": "admin" | "guest"
+    },
+    ...
+]</code></pre>
+         <hr>
+         <h2>Get User by ID</h2>
+         <p>Use this endpoint to retrieve a user by their ID.</p>
+         <h4>URL</h4>
+         <p><code>GET /users/&lt;id&gt;</code></p>
+         <h4>Response</h4>
+         <pre><code>{
+    "id": 1,
+    "name": "string",
+    "role": "admin" | "guest"
+}</code></pre>
+         <hr>
+         <h2>Update User</h2>
+         <p>Use this endpoint to update an existing user's information.</p>
+         <h4>URL</h4>
+         <p><code>PUT /users/&lt;id&gt;</code></p>
+         <h4>Request Body</h4>
+         <pre><code>{
+    "name": "string",
+    "password": "string",
+    "role": "admin" | "guest"
+}</code></pre>
+         <h4>Response</h4>
+         <pre><code>{
+    "message": "User updated successfully"
+}</code></pre>
+         <hr>
+         <h2>Delete User</h2>
+         <p>Use this endpoint to delete a user.</p>
+         <h4>URL</h4>
+         <p><code>DELETE /users/&lt;id&gt;</code></p>
+         <h4>Response</h4>
+         <pre><code>{
+    "message": "User deleted successfully"
+}</code></pre>
+      </div>
+   </div>
+</div>
+{% endblock %}
