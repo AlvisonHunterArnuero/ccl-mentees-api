@@ -2,43 +2,44 @@
 
 {% block title %}Login Docs - Login API Documentation{% endblock %}
 {% block content %}
-<div class="container my-5 pt-4">
-<div class="row d-flex justify-content-center align-items-center">
-<div class="col-12 my-5">
-        <h1>Login API Documentation</h1>
-        <p class="lead">This guide covers the authentication endpoints for logging in and out of the CCL Mentoring Program API.</p>
+<div class="container my-5 pt-4 mx-4">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12 my-5">
+            <h1>Login API Documentation</h1>
+            <p class="lead">This guide covers the authentication endpoints for logging in and out of the CCL Mentoring
+                Program API.</p>
 
-        <hr>
+            <hr>
 
-        <h2>Login Endpoint</h2>
-        <p>Use this endpoint to log in to the API.</p>
-        <h4>URL</h4>
-        <p><code>POST /login</code></p>
-        <h4>Request Body</h4>
-        <pre><code>{
+            <h2>Login Endpoint</h2>
+            <p>Use this endpoint to log in to the API.</p>
+            <h4>URL</h4>
+            <p><code>POST /login</code></p>
+            <h4>Request Body</h4>
+            <pre><code>{
     "name": "string",
     "password": "string"
 }</code></pre>
-        <h4>Response</h4>
-        <pre><code>{
+            <h4>Response</h4>
+            <pre><code>{
     "message": "Logged in successfully"
 }</code></pre>
-        <h4>Error Response</h4>
-        <pre><code>{
+            <h4>Error Response</h4>
+            <pre><code>{
     "message": "Invalid credentials"
 }</code></pre>
 
-        <hr>
+            <hr>
 
-        <h2>Logout Endpoint</h2>
-        <p>Use this endpoint to log out of the API.</p>
-        <h4>URL</h4>
-        <p><code>GET /logout</code></p>
-        <h4>Response</h4>
-        <pre><code>{
+            <h2>Logout Endpoint</h2>
+            <p>Use this endpoint to log out of the API.</p>
+            <h4>URL</h4>
+            <p><code>GET /logout</code></p>
+            <h4>Response</h4>
+            <pre><code>{
     "message": "Logged out successfully"
 }</code></pre>
-</div>
-</div>
+        </div>
+    </div>
 </div>
 {% endblock %}
