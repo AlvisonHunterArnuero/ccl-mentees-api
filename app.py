@@ -88,6 +88,13 @@ def load_user(user_id: int) -> Optional[User]:
 
 
 # Login route
+
+@app.route("/logon")
+def logon() -> str:
+    """Logon route for the application."""
+    return render_template("auth/login.html")
+
+
 @app.route("/login", methods=["POST"])
 def login() -> Any:
     """Login route for the application."""
@@ -138,19 +145,19 @@ def users_docs() -> str:
 @app.route("/team")
 def team():
     flash("This route is not yet completely built.")
-    return redirect(url_for("hello"))
+    return render_template("pages/team.html")
 
 
 @app.route("/testimonials")
 def testimonials():
     flash("This route is not yet completely built.")
-    return redirect(url_for("hello"))
+    return render_template("pages/testimonials.html")
 
 
 @app.route("/contact")
 def contact():
     flash("This route is not yet completely built.")
-    return redirect(url_for("hello"))
+    return render_template("pages/contact.html")
 
 
 # ------- CRUD operations for User -----------

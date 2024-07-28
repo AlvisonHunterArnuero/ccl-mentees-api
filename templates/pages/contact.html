@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h2>{% block title %}Contact CCL{% endblock title %}</h2>
+{% endblock header %}
+
+{% block content %}
+  <p>This is a message board for friendly Contacts.</p>
+{% block content %}
+  <form method="post">
+    <label for="subject">Subject</label>
+    <input name="subject" id="subject">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name">
+         <label for="email">Email</label>
+    <input type="email" name="email" id="email" required>
+         <label for="comments">Email</label>
+    <input type="text" name="comments" id="comments">
+
+    <input type="submit" value="Contact Us">
+  </form>
+{% endblock %}
+{% endblock content %}
